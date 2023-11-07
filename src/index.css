@@ -1,0 +1,141 @@
+@import url(https://fonts.googleapis.com/css?family=Space+Mono:regular,italic,700,700italic);
+@import url(https://fonts.googleapis.com/css?family=Staatliches:regular);
+
+span {
+  display: flex;
+  flex-direction: row;
+  margin: 0 10rem;
+  align-items: center;
+  margin-top: 2rem;
+  font-family: 'Space Mono', sans-serif;
+}
+
+span:before,
+span:after {
+  content: '';
+  flex: 1 1;
+  border-bottom: 3px solid #e5e7eb;
+  margin: 0 1rem;
+}
+
+.para-text {
+  font-family: 'Space Mono', sans-serif;
+  text-align: center;
+  margin: 0 30rem;
+  max-width: 1400px;
+}
+
+.main-heading {
+  font-family: 'Staatliches', sans-serif;
+  text-align: center;
+  letter-spacing: 0.3rem;
+  font-size: 3rem;
+}
+
+.input-container {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+}
+input {
+  width: 15rem;
+  height: 1.5rem;
+  padding-left: 0.6rem;
+  border-radius: 5px;
+  outline: none;
+  border: 2px solid black;
+}
+
+button {
+  border-radius: 20px;
+  padding: 0.6rem 1.5rem;
+
+  letter-spacing: 0.1rem;
+  border: none;
+  outline: none;
+  transition: linear;
+}
+button:hover {
+  cursor: pointer;
+  background: black;
+  color: white;
+}
+
+.addressPlaces {
+  list-style: none;
+}
+
+.address-display {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Space Mono', sans-serif;
+}
+
+.error-message {
+  color: red;
+  font-family: 'Space Mono', sans-serif;
+  text-align: center;
+  margin-top: 0.5rem;
+}
+
+.loading-text {
+  display: flex;
+  justify-content: center;
+}
+
+.no-data {
+  text-align: center;
+  font-family: 'Space Mono', sans-serif;
+}
+
+.loading {
+  display: flex;
+  justify-content: center;
+}
+
+.loading::after {
+  content: '';
+  width: 50px;
+  height: 50px;
+  border: 5px solid black;
+  border-top-color: white;
+  border-radius: 50%;
+  animation: loading 1s ease infinite;
+}
+
+@keyframes loading {
+  to {
+    transform: rotate(1turn);
+  }
+}
+
+@media screen and (max-width: 1300px) {
+  .para-text {
+    margin: 0 15rem;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .para-text {
+    margin: 0 10rem;
+  }
+}
+@media screen and (max-width: 800px) {
+  .para-text {
+    margin: 0 4rem;
+  }
+  .main-heading {
+    font-size: 1.5rem;
+  }
+}
+@media screen and (max-width: 600px) {
+  .para-text {
+    margin: 0 1rem;
+  }
+  span {
+    margin: 0 0;
+  }
+}
